@@ -25,4 +25,86 @@
 html,
 body {
   @apply h-full m-0;
+  padding-top: 30px;
+}
+
+h1{
+  text-align: center;
+  font-size: 40px;
+  background-color: #006400;
+  color: #ffffff;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+select{
+  width: 100%;
+}
+
+option{
+  text-align: center;
+}
+
+.selectbox-006 {
+  position: relative;
+}
+
+.selectbox-006::before,
+.selectbox-006::after {
+  position: absolute;
+  right: 15px;
+  width: 9px;
+  height: 6px;
+  background-color: #535353;
+  content: '';
+  pointer-events: none;
+}
+
+.selectbox-006::before {
+  top: calc(50% - 9px);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.selectbox-006::after {
+  bottom: calc(50% - 9px);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.selectbox-006 select {
+  appearance: none;
+  min-width: 230px;
+  height: 2.8em;
+  padding: .4em calc(.8em + 30px) .4em .8em;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333333;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* フォーカス時のスタイル */
+input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.4);
+}
+
+/* 無効な入力時のスタイル */
+input:invalid {
+  border-color: #cc0000;
 }
