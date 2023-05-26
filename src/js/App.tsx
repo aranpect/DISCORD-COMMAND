@@ -1,49 +1,49 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import Swal from 'sweetalert2'
 
 function App() {
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     setInputValue(e.target.value);
   };
 
   const handleHKClick = () =>{
-    let element = document.getElementById('sentaku');
-    const mchange = document.getElementById("input").value;
-    if (element.value==1){
+    let element = (document.getElementById('sentaku') as HTMLSelectElement);
+    const mchange = (document.getElementById("input") as HTMLInputElement).value;
+    if (element.value==="1"){
       navigator.clipboard.writeText("*"+mchange+"*")
-      Swal.fire("文字をコピーしました")
+      Swal.fire("文字をコピーしました");
     }
-    else if (element.value==2){
+    else if (element.value==="2"){
       navigator.clipboard.writeText("**"+mchange+"**")
-      Swal.fire("文字をコピーしました")
+      Swal.fire("文字をコピーしました");
     }
-    else if (element.value==3){
+    else if (element.value==="3"){
       navigator.clipboard.writeText("***"+mchange+"***")
       Swal.fire("文字をコピーしました");
     }
-    else if (element.value==4){
+    else if (element.value==="4"){
       navigator.clipboard.writeText("__"+mchange+"__")
       Swal.fire("文字をコピーしました");
     }
-    else if (element.value==5){
+    else if (element.value==="5"){
       navigator.clipboard.writeText("~~"+mchange+"~~")
       Swal.fire("文字をコピーしました");
     }
-    else if (element.value==6){
+    else if (element.value==="6"){
       navigator.clipboard.writeText("||"+mchange+"||")
       Swal.fire("文字をコピーしました");
     }
-    else if (element.value==7){
+    else if (element.value==="7"){
       navigator.clipboard.writeText("'"+mchange+"'")
       Swal.fire("文字をコピーしました");
     }
-    else if (element.value==8){
+    else if (element.value==="8"){
       navigator.clipboard.writeText("> "+mchange)
       Swal.fire("文字をコピーしました");
     }
-
+  }
   return (
     <div>
     <header>
