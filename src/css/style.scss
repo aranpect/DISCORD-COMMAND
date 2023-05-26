@@ -108,3 +108,21 @@ input:focus {
 input:invalid {
   border-color: #cc0000;
 }
+
+button {
+  /* 背景色 */
+  background-color: #4CAF50;
+  /* テキストの色 */
+  color: white;
+  /* フォントサイズ */
+  font-size: 16px;
+  /* パディング */
+  padding: 10px 20px;
+  /* ボーダー */
+  border: none;
+  width: 100%;
+}
+
+button:hover{
+  background-color: #006400;
+}
